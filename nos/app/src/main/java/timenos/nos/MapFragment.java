@@ -26,7 +26,8 @@ public class MapFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.map_fragment, container, false);
         WebView map = (WebView) rootView.findViewById(R.id.map_web_view);
-        map.loadUrl("https://developer.android.com/training/system-ui/status.html");
+        map.getSettings().setJavaScriptEnabled(true);
+        map.loadUrl("file:///android_asset/www/map.html");
         return rootView;
     }
 }
