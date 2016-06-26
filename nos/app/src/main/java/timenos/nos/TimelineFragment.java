@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.support.v4.app.Fragment;
+import android.widget.ListView;
 
 /**
  * Created by carlos on 6/24/16.
@@ -24,6 +25,9 @@ public class TimelineFragment extends android.support.v4.app.Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.timeline_fragment, container, false);
+        View rootView = inflater.inflate(R.layout.timeline_fragment, container, false);
+        ListView timeline = (ListView) rootView.findViewById(R.id.timeline_list);
+        timeline.setAdapter(new TimelineListAdapter(this.getContext()));
+        return rootView;
     }
 }

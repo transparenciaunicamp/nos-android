@@ -39,8 +39,7 @@
             android:layout_height="1dp"
             android:background="#000000"/>
 
-
-        <android.support.v4.view.ViewPager
+        <timenos.nos.CustomViewPager
             android:id="@+id/container"
             android:layout_width="match_parent"
             android:layout_height="0px"
